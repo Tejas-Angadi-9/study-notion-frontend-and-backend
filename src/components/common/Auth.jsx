@@ -6,15 +6,15 @@ import SignupForm from "../core/Auth/SignupForm";
 import frame from "../../assets/Images/frame.png";
 
 const Auth = ({ heading, subHeading, highlightext, image, type }) => {
-  const [role, setRole] = useState("student");
+  const [accountType, setAccountType] = useState("Student");
 
   function changeRole(value) {
-    setRole(value);
+    setAccountType(value);
   }
-  console.log("Role: ", role);
+  console.log("accountType: ", accountType);
   return (
     <div className="w-11/12 h-[100%] flex flex-row gap-[100px] justify-evenly">
-      <div className="w-[50%] h-[80%] px-6 flex flex-col justify-evenly mb-10">
+      <div className="w-[50%] h-[80%] px-6 flex flex-col justify-evenly mb-10 -mt-20">
         <div className="mt-[200px] flex flex-col gap-5">
           {/* Heading */}
           <h2 className="text-[30px] text-richblack-25 w-[59%] font-semibold">
@@ -33,16 +33,16 @@ const Auth = ({ heading, subHeading, highlightext, image, type }) => {
           <div className="border-2 border-richblack-700 w-[40%] h-fit my-8 flex text-[16px] justify-around p-1 rounded-full bg-richblack-800 gap-2">
             <div
               className={`w-[140px] rounded-full p-2 items-center text-center cursor-pointer ${
-                role === "student" && "bg-richblack-900"
+                accountType === "Student" && "bg-richblack-900"
               } transition-all duration-200`}
-              onClick={() => changeRole("student")}>
+              onClick={() => changeRole("Student")}>
               Student
             </div>
             <div
               className={`w-[140px] rounded-full p-2 items-center text-center cursor-pointer ${
-                role === "instructor" && "bg-richblack-900 "
+                accountType === "Instructor" && "bg-richblack-900 "
               } transition-all duration-200`}
-              onClick={() => changeRole("instructor")}>
+              onClick={() => changeRole("Instructor")}>
               Instructor
             </div>
           </div>
@@ -50,9 +50,9 @@ const Auth = ({ heading, subHeading, highlightext, image, type }) => {
         {/* Form with forget password */}
         <div>
           {type === "login" ? (
-            <LoginForm role={role} />
+            <LoginForm accountType={accountType} />
           ) : (
-            <SignupForm role={role} />
+            <SignupForm accountType={accountType} />
           )}
         </div>
       </div>

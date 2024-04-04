@@ -71,10 +71,35 @@ exports.sendOTP = async (req, res) => {
 // Signup
 exports.signup = async (req, res) => {
     try {
-        const { firstName, lastName, email, password, confirmPassowrd, phoneNumber, accountType, otp } = req.body;
+        const { firstName, lastName, email, password, confirmPassword, phoneNumber, accountType, otp } = req.body;
+
+        if (!firstName) {
+            return console.log("firstName is missing")
+        }
+        if (!lastName) {
+            return console.log("lastName is missing")
+        }
+        if (!email) {
+            return console.log("email is missing")
+        }
+        if (!password) {
+            return console.log("password is missing")
+        }
+        if (!confirmPassword) {
+            return console.log("confirmPassword is missing")
+        }
+        if (!phoneNumber) {
+            return console.log("phoneNumber is missing")
+        }
+        if (!accountType) {
+            return console.log("accountType is missing")
+        }
+        if (!otp) {
+            return console.log("otp is missing")
+        }
 
         //* validate all the data
-        if (!firstName || !lastName || !email || !password || !confirmPassowrd || !phoneNumber || !accountType || !otp) {
+        if (!firstName || !lastName || !email || !password || !confirmPassword || !phoneNumber || !accountType || !otp) {
             return res.status(400).json({
                 status: 'fail',
                 message: 'Fill all the fields'
@@ -82,7 +107,7 @@ exports.signup = async (req, res) => {
         }
 
         //* validate the password and confirmPassword
-        if (password !== confirmPassowrd) {
+        if (password !== confirmPassword) {
             return res.status(400).json({
                 status: 'fail',
                 message: 'Passwords doesn\'t match'

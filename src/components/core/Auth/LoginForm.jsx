@@ -6,7 +6,7 @@ import { LuEyeOff } from "react-icons/lu";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../../services/operations/authAPI";
 
-const LoginForm = ({ type, role }) => {
+const LoginForm = ({ type, accountType }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [passwordVisibility, setPasswordVisibility] = useState(false);
@@ -15,7 +15,7 @@ const LoginForm = ({ type, role }) => {
     // Initialize form fields
     email: "",
     password: "",
-    role: role,
+    accountType: accountType,
   });
 
   const { email, password } = formData;
@@ -25,7 +25,7 @@ const LoginForm = ({ type, role }) => {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
-      role: role,
+      accountType: accountType,
     }));
   };
 
