@@ -18,7 +18,7 @@ const About = () => {
     <div className="h-full mt-[100px] text-white text-center">
       {/* Section 1 */}
       <section>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 w-8/12 mx-auto">
           <header className="text-[36px] font-semibold w-fit">
             Driving Innovation in Online Education for a <br />
             <HighLightText text={"Brighter Future"} />
@@ -30,9 +30,9 @@ const About = () => {
             </p>
           </header>
           <div className="flex gap-10 items-center justify-center mx-auto">
-            <img src={Aboutus1} alt="aboutus1.png" />
-            <img src={Aboutus2} alt="aboutus2.png" />
-            <img src={Aboutus3} alt="aboutus3.png" />
+            <img src={Aboutus1} alt="aboutus1.png" className="rounded-md" />
+            <img src={Aboutus2} alt="aboutus2.png" className="rounded-md" />
+            <img src={Aboutus3} alt="aboutus3.png" className="rounded-md" />
           </div>
         </div>
       </section>
@@ -50,7 +50,7 @@ const About = () => {
       </section>
 
       {/* Section 4 */}
-      <section className="w-screen -ml-[100px] h-[200px] bg-[#2C333F] flex items-center justify-center mt-10">
+      <section className="w-screen h-[200px] bg-[#2C333F] flex items-center justify-center mt-10">
         <Stats />
       </section>
 

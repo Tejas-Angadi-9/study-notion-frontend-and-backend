@@ -12,7 +12,7 @@ const Boxes = ({ type, heading, paragraph, image, color }) => {
         </div>
       ) : (
         <div>
-          <img src={image} alt="image" />
+          <img src={image} alt="image" className="rounded-md" />
         </div>
       )}
     </div>
