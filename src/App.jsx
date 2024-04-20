@@ -11,6 +11,7 @@ import UpdatePassword from "./components/core/HomePage/UpdatePassword";
 import OpenRoute from "./components/core/Auth/OpenRoute";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/update-password/:id" element={<UpdatePassword />} />
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

@@ -5,6 +5,7 @@ import Quote from "../components/core/AboutPage/Quote";
 import BoxSection from "../components/core/AboutPage/BoxSection";
 import Stats from "../components/core/AboutPage/Stats";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
+import ContactFormSection from "./ContactFormSection";
 
 import Aboutus1 from "../assets/Images/aboutus1.webp";
 import Aboutus2 from "../assets/Images/aboutus2.webp";
@@ -14,7 +15,7 @@ import Footer from "../components/common/Footer";
 
 const About = () => {
   return (
-    <div className="h-full m-[100px] text-white text-center">
+    <div className="h-full mt-[100px] text-white text-center">
       {/* Section 1 */}
       <section>
         <div className="flex flex-col gap-12">
@@ -54,10 +55,22 @@ const About = () => {
       </section>
 
       {/* Section 5 */}
-      <section>
-        <LearningGrid></LearningGrid>
+      <section className="flex flex-col gap-10">
+        <LearningGrid />
+        <ContactFormSection
+          heading={"Get in Touch"}
+          description={"We’d love to here for you, Please fill out this form."}
+        />
       </section>
-      {/* <Footer /> */}
+
+      {/* Section 6 */}
+      {/* //TODO: Reviews section needs to be added */}
+      <div className="mx-auto flex items-center justify-center text-2xl font-semibold m-5 text-[#e75555]">
+        Reviews section coming soon....
+      </div>
+      <section className="mt-20">
+        <Footer />
+      </section>
     </div>
   );
 };
