@@ -21,20 +21,14 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route
           path="/signup"
-          element={
-            <OpenRoute>
-              <Signup />
-            </OpenRoute>
-          }
+          // element={
+          //   <OpenRoute>
+          //     <Signup />
+          //   </OpenRoute>
+          // }
+          element={<Signup />}
         />
-        <Route
-          path="/login"
-          element={
-            <OpenRoute>
-              <Login />
-            </OpenRoute>
-          }
-        />
+        <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/update-password/:id" element={<UpdatePassword />} />
         <Route path="/verify-email" element={<VerifyEmail />} />

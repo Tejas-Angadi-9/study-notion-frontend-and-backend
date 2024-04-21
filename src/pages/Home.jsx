@@ -26,8 +26,8 @@ const Home = () => {
       <div className="relative mx-auto flex flex-col w-11/12 max-w-maxContent items-center text-white justify-between">
         {/* Section 1 button */}
         <Link to={"/signup"}>
-          <div className="group mt-20 p-3 mx-auto rounded-full bg-richblue-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit ">
-            <div className="flex flex-row items-center justify-center gap-2 rounded-full px-10 py-[5px] group-hover:bg-richblack-900">
+          <div className="group mt-12 p-3 mx-auto rounded-full bg-richblue-800 font-bold text-richblack-200 transition-all duration-200 hover:scale-95 w-fit ">
+            <div className="flex flex-row items-center justify-center gap-2 rounded-full px-10 py-[5px]">
               <p>Become an instructor</p>
               <FaArrowRight />
             </div>

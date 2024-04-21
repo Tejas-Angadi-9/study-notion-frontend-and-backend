@@ -14,7 +14,7 @@ import { categories } from "../../services/api";
 
 const Navbar = () => {
   //* Get the data from the redux state management to check if the user is logged-in/signed-up or not
-  const token = useSelector((state) => state.auth.user);
+  const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
 
@@ -34,8 +34,6 @@ const Navbar = () => {
   useEffect(() => {
     fetchSubLinks();
   }, []);
-
-  console.log("subLinks: ", subLinks);
 
   const [selectedTab, setSelectedTab] = useState("Home");
   return (
@@ -110,7 +108,7 @@ const Navbar = () => {
             <Link
               to={"/dashboard/cart"}
               className="relative flex items-center mr-5">
-              <AiOutlineShoppingCart className="text-white text-[30px]" />
+              <AiOutlineShoppingCart className="text-richblack-100 text-[30px]" />
               {/* Showing the cart items and setting to absoulte as it be over the cart icon */}
               {totalItems > 0 && (
                 <div className="text-white absolute -top-1 left-4  bg-caribbeangreen-300 px-2 rounded-full flex items-center justify-center">
