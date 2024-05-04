@@ -14,7 +14,7 @@ import { categories } from "../../services/api";
 
 const Navbar = () => {
   //* Get the data from the redux state management to check if the user is logged-in/signed-up or not
-  const token = useSelector((state) => state.auth.user);
+  const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
 

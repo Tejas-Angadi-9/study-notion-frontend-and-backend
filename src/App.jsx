@@ -14,6 +14,7 @@ import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import Dashboard from "./pages/Dashboard";
 import MyProfile from "./components/core/Dashboard/MyProfile";
+import PrivateRoute from "./components/core/Auth/PrivateRoute";
 
 const App = () => {
   return (
@@ -42,7 +43,15 @@ const App = () => {
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="dashboard/my-profile" element={<Dashboard />}></Route>
+
+        <Route
+          path="dashboard/my-profile"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

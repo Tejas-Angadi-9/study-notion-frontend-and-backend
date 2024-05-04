@@ -10,13 +10,16 @@ const Dashboard = () => {
   const currentURL = location.pathname;
   console.log("Current URL: ", currentURL);
   const { loading: authLoading } = useSelector((state) => state.auth);
-  const { loading: profileLoading } = useSelector((state) => state.auth);
+  const {user, loading: profileLoading } = useSelector((state) => state.profile);
 
   if (profileLoading || authLoading) {
     return <div className="mt-10">Loading...</div>;
   }
 
   return (
+    // {
+
+    // }
     <div className="relative flex min-h-[calc(100vh-3.5rem)] text-white">
       <Sidebar />
       <div className="h-[calc(100vh-3.5rem)] overflow-auto">

@@ -37,10 +37,7 @@ const Sidebar = () => {
           iconName={sidebarLinks[0].icon}
         />
         {sidebarLinks.map((link) => {
-          if (
-            (link.type && user?.accountType == link?.type) ||
-            !user.accountType
-          )
+          if (link.type && user?.accountType == link?.type)
             return (
               <>
                 <SidebarLinks key={link.id} link={link} iconName={link.icon} />
