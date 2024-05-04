@@ -12,6 +12,8 @@ import OpenRoute from "./components/core/Auth/OpenRoute";
 import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./components/core/Dashboard/MyProfile";
 
 const App = () => {
   return (
@@ -40,6 +42,7 @@ const App = () => {
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="dashboard/my-profile" element={<Dashboard />}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

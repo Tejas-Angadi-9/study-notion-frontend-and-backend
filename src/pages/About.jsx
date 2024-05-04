@@ -15,14 +15,14 @@ import Footer from "../components/common/Footer";
 
 const About = () => {
   return (
-    <div className="h-full mt-[100px] text-white text-center">
+    <div className="h-full w-full mt-[100px] text-white text-center">
       {/* Section 1 */}
       <section>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 mx-auto w-[60%]">
           <header className="text-[36px] font-semibold w-fit">
             Driving Innovation in Online Education for a <br />
             <HighLightText text={"Brighter Future"} />
-            <p className="text-[16px] text-richblack-300 mt-5">
+            <p className="text-[16px] text-richblack-300 mt-5 ">
               Studynotion is at the forefront of driving innovation in online
               education. We're passionate about creating a brighter future by
               offering cutting-edge courses, leveraging emerging technologies,
@@ -45,12 +45,12 @@ const About = () => {
       </section>
 
       {/* Section 3 */}
-      <section className="mt-20 mx-auto">
+      <section className="mt-20 mx-auto items-center flex justify-between">
         <BoxSection />
       </section>
 
       {/* Section 4 */}
-      <section className="w-screen -ml-[100px] h-[200px] bg-[#2C333F] flex items-center justify-center mt-10">
+      <section className="w-screen h-[200px] bg-[#2C333F] flex items-center justify-center mt-10">
         <Stats />
       </section>
 

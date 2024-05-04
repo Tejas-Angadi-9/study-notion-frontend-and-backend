@@ -2,7 +2,7 @@ import React from "react";
 
 const Boxes = ({ type, heading, paragraph, image, color }) => {
   return (
-    <div className="w-[60%]">
+    <div className="w-[45%]">
       {type === "text" ? (
         <div className="text-left">
           <h2 className={`${color} text-left text-[36px] font-bold`}>

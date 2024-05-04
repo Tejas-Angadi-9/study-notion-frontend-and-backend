@@ -5,8 +5,8 @@ import FoundingStory from "../../../assets/Images/FoundingStory.png";
 
 const BoxSection = () => {
   return (
-    <div className="flex flex-col gap-12 px-20 py-10">
-      <div className="flex gap-20">
+    <div className="flex flex-col gap-12 px-[200px] py-[100px]">
+      <div className="flex gap-20 justify-between">
         <Boxes
           type={"text"}
           heading={"Our Founding Story "}
@@ -16,7 +16,7 @@ const BoxSection = () => {
 
         <Boxes type={"img"} image={FoundingStory} />
       </div>
-      <div className="flex gap-20 mt-20">
+      <div className="flex gap-20 mt-20 justify-between">
         <Boxes
           type={"text"}
           heading={"Our Vision "}

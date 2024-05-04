@@ -100,11 +100,14 @@ export const login = (email, password, navigate) => async (dispatch) => {
 
         toast.success("Login Successful")
         dispatch(setToken(response.data.token));
+        dispatch(setToken(response.data.exisitingUser));
         // const userImage = response.data?.user?.image
         //     ? response.data.user.image
         //     : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
         // dispatch(setUser({ ...response.data.user, image: userImage }))
+        // localStorage.setItem("user", JSON.stringify(response.data))
         localStorage.setItem("token", JSON.stringify(response.data.exisitingUser.token))
+        localStorage.setItem("user", JSON.stringify(response.data.exisitingUser))
         navigate("/dashboard/my-profile")
     }
     catch (err) {
