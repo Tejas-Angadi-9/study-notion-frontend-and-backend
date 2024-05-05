@@ -68,6 +68,14 @@ const App = () => {
             </PrivateRoute>
           }
         />
+        <Route
+          path="dashboard/settings"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

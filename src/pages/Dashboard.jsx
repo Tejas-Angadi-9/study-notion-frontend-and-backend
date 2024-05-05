@@ -6,6 +6,7 @@ import Sidebar from "../components/core/Dashboard/Sidebar";
 import MyProfile from "../components/core/Dashboard/MyProfile";
 import EnrolledCourses from "../components/core/Dashboard/EnrolledCourses";
 import PurchaseHistory from "../components/core/Dashboard/PurchaseHistory";
+import Settings from "../components/core/Dashboard/Settings";
 
 const Dashboard = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const Dashboard = () => {
       {currentURL === "/dashboard/my-profile" && <MyProfile />}
       {currentURL === "/dashboard/enrolled-courses" && <EnrolledCourses />}
       {currentURL === "/dashboard/purchase-history" && <PurchaseHistory />}
+      {currentURL === "/dashboard/settings" && <Settings />}
       {/* </div> */}
     </div>
   );

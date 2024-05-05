@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div className="flex min-w-[222px] gap-3 flex-col border-r-[1px] border-r-richblack-700 h-[calc(100vh-3.5rem)] bg-richblack-800 py-10 relative pl-5 text-richblack-100">
+      <div className="flex min-w-[222px] gap-3 flex-col border-r-[1px] border-r-richblack-700 h-[120vh] bg-richblack-800 py-10 relative pl-5 text-richblack-100">
         <SidebarLinks
           link={{
             name: sidebarLinks[0].name,
@@ -51,7 +51,7 @@ const Sidebar = () => {
         {/* Creating 2 links for settings and logout */}
         <div className="flex flex-col gap-3">
           <SidebarLinks
-            link={{ name: "Settings", path: "dashboard/settings" }}
+            link={{ name: "Settings", path: "/dashboard/settings" }}
             iconName="VscSettingsGear"
           />
 

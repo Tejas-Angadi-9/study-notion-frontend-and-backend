@@ -87,7 +87,7 @@ const LoginForm = ({ type, accountType }) => {
           onClick={() => console.log(formData)}
           className={`w-full text-center text-[13px] px-6 py-3 rounded-md font-bold 
             bg-yellow-50 text-black hover:scale-95 transition-all duration-200 mt-5`}>
-          {type === "login" ? "login" : "Sign up"}
+          Login
         </button>
       </form>
     </div>
