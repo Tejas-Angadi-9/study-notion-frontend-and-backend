@@ -26,14 +26,14 @@ const Dashboard = () => {
       <div>
         <Sidebar />
       </div>
-      <div className="h-[calc(100vh-3.5rem)] overflow-auto">
-        <div className="mx-auto w-11/12 max-w-[100px] py-10">
-          <Outlet />
-        </div>
-        {currentURL === "/dashboard/my-profile" && <MyProfile />}
-        {currentURL === "/dashboard/enrolled-courses" && <EnrolledCourses />}
-        {currentURL === "/dashboard/purchase-history" && <PurchaseHistory />}
+      {/* <div className="h-[calc(100vh-3.5rem)] overflow-auto"> */}
+      <div className="mx-auto w-11/12 max-w-[100px] py-10">
+        <Outlet />
       </div>
+      {currentURL === "/dashboard/my-profile" && <MyProfile />}
+      {currentURL === "/dashboard/enrolled-courses" && <EnrolledCourses />}
+      {currentURL === "/dashboard/purchase-history" && <PurchaseHistory />}
+      {/* </div> */}
     </div>
   );
 };

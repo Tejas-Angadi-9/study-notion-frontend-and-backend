@@ -10,7 +10,7 @@ const IconButton = ({
   type,
 }) => {
   return (
-    <button disabled onClick={onclick} type={type}>
+    <button disabled onClick={onclick} type={type} className="cursor-pointer">
       {children ? (
         <>
           <span>{text}</span>
