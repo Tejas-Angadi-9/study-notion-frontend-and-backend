@@ -52,6 +52,22 @@ const App = () => {
             </PrivateRoute>
           }
         />
+        <Route
+          path="dashboard/enrolled-courses"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="dashboard/purchase-history"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
